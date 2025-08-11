@@ -1,0 +1,14 @@
+//You are given an array of integers containing N elements. Your task is to find and return an integer value representing the total number of subarrays of size 3
+where the sum of the first element and the third element is equal to the second element.
+class Count_subarray_sumoffirstandthird {
+    public static void main(String[] args) {
+       int arr[]={1,2,1,4,5};
+       int c=0;
+      for(int i=0;i<arr.length-2;i++){
+          if(arr[i]+arr[i+2]==arr[i+1]){
+              c++;
+          }
+      }
+      System.out.print(c);
+    }
+}
