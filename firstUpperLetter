@@ -1,0 +1,25 @@
+class Main {
+    public static void main(String[] args) {
+        String str="manaSi";
+        char res=firstUpper(str,0);
+        if(res==0){
+            System.out.print("no uppercase letter found in a string");
+        }
+        else{
+            System.out.print(res);
+        }
+    }
+    public static char firstUpper(String str,int index){
+        if(index==str.length()){
+            return 0;
+        }
+        if(Character.isUpperCase(str.charAt(index))){
+            return str.charAt(index);
+        }
+        else{
+            return firstUpper(str,index+1);
+        }
+    }
+}
+
+output: S
