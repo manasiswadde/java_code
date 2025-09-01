@@ -1,0 +1,14 @@
+class Main {
+    public static void main(String[] args) {
+       String str="hello";
+       System.out.print(lenstring(str));
+    }
+    public static int lenstring(String str){
+        if(str.equals("")){
+            return 0;
+        }
+        return lenstring(str.substring(1))+1;
+    }
+    
+}
+output:5
