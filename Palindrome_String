@@ -1,0 +1,16 @@
+class Palindrome_String{
+    public static void main(String[] args) {
+        String str="madam";
+        String sb=new StringBuilder(str).reverse().toString();
+        
+        if(str.equals(sb)){
+            System.out.print("palindrome");
+        }
+        else{
+             System.out.print("not palindrome");
+        }
+        
+    }
+}
+
+output: palindrome
