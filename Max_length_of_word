@@ -14,3 +14,5 @@ class Max_length_of_word {
        return count; 
     }
 }
+
+output:6
