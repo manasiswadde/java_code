@@ -1,0 +1,16 @@
+class Max_length_of_word {
+    public static void main(String[] args) {
+        System.out.println(cal("i am manasi"));
+    }
+    public static int cal(String str){
+        String c[]=str.split(" ");
+        int count=0;
+        for(String s:c){
+            int length=s.length();
+            if(count<length){
+                count=length;
+            }
+        }
+       return count; 
+    }
+}
