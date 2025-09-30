@@ -1,0 +1,11 @@
+class Leap_year {
+    public static void main(String[] args) {
+        System.out.print(cal(2004));
+    }
+    public static String cal(int year){
+        if((year%4==0 && year%100!=0)|| year%400==0){
+            return "leap year";
+        }
+        return "not leap year";
+    }
+}
