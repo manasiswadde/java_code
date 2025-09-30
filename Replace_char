@@ -1,0 +1,9 @@
+class Replace_char {
+    public static void main(String[] args) {
+        System.out.print(cal("aaa"));
+    }
+    public static String cal(String str){
+        String s=str.replace('a','b');
+        return s;
+    }
+}
