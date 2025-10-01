@@ -14,3 +14,18 @@ class Palindrome_String{
 }
 
 output: palindrome
+
+class Palindrome {
+    public static void main(String[] args) {
+        System.out.print(pal(121));
+    }
+    public static String pal(int no){
+        String str=Integer.toString(no);
+        String s=new StringBuilder(str).reverse().toString();
+        if(s.equals(str)){
+            return "palindrome";
+        }
+        return "not palindrome";
+    }
+}
+output:palindrome
