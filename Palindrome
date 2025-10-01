@@ -29,3 +29,22 @@ class Palindrome {
     }
 }
 output:palindrome
+
+class Palindrome {
+    public static void main(String[] args) {
+        System.out.print(pal(121));
+    }
+    public static String pal(int no){
+       int temp=no;
+       int rev=0;
+       while(no>0){
+           int num=no%10;
+           rev=rev*10+num;
+           no=no/10;
+       }
+       if(rev==temp){
+           return "palindrome";
+       }
+       return "not palindrome";
+    }
+}
