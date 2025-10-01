@@ -1,0 +1,18 @@
+import java.util.*;
+class check_digit_from_list {
+    public static void main(String[] args) {
+        List<Object> obj=new ArrayList<>();
+        obj.add(10);
+        obj.add(20);
+        obj.add("hello");
+        System.out.print(checkdigit(obj));
+    }
+    public static boolean checkdigit(List<Object> obj){
+       for(Object ele:obj){
+           if(!(ele instanceof Integer)){
+               return false;
+           }
+       }
+       return true;
+    }
+}
