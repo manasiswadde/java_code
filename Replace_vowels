@@ -1,0 +1,10 @@
+class Replace_vowels {
+    public static void main(String[] args) {
+        System.out.print(vowel("manasi"));
+    }
+    public static String vowel(String str){
+        return str.replaceAll("[aeiou]","*");
+    }
+}
+
+output: m*n*s*
