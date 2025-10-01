@@ -1,0 +1,14 @@
+import java.util.*;
+class ReverseArray {
+    public static void main(String[] args) {
+        System.out.print(Arrays.toString(reverse(new int[]{1,2,3,4,5})));
+    }
+    public static int[] reverse(int arr[]){
+        int newarr[]=new int[arr.length];
+        for(int i=arr.length-1;i>=0;i--){
+            newarr[arr.length-i-1]=arr[i];
+        }
+        return newarr;
+    }
+}
+output: [5, 4, 3, 2, 1]
