@@ -1,0 +1,11 @@
+class Reverse_String {
+    public static void main(String[] args) {
+        System.out.print(reverse("manasi"));
+    }
+    public static String reverse(String str){
+        String s=new StringBuilder(str).reverse().toString();
+        return s;
+    }
+}
+
+output: isanam
