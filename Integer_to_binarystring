@@ -1,0 +1,11 @@
+class Integer_to_binarystring {
+    public static void main(String[] args) {
+        System.out.println(binary(42));
+    }
+    public static String binary(int no){
+       return Integer.toBinaryString(no);
+    }
+}
+
+output:
+101010
