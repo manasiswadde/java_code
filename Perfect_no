@@ -1,0 +1,17 @@
+
+class Perfect_no {
+    public static void main(String[] args) {
+        System.out.println(perfect(16));
+    }
+    public static boolean perfect(int no){
+        if(no>0){
+          double sq=(double)Math.sqrt(no);
+          if(no==sq*sq){
+              return true;
+          }
+        }
+        return false;
+    }
+}
+
+output: true
