@@ -1,0 +1,11 @@
+class check_substring_present_in_string {
+    public static void main(String[] args) {
+        System.out.println(substring("manasi","man"));
+    }
+    public static boolean substring(String str,String sub){
+        if(str.contains(sub)){
+            return true;
+        }
+        return false;
+    }
+}
