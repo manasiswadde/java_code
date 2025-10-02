@@ -1,0 +1,22 @@
+import java.util.*;
+class Replace_duplicate_with_underscore {
+    public static void main(String[] args) {
+        System.out.println(duplicate("manasi"));
+    }
+    public static String duplicate(String str){
+    
+        StringBuilder sb=new StringBuilder();
+        Set<Character> st=new HashSet<>();
+        for(char c:str.toCharArray()){
+            if(st.contains(c)){
+                sb.append('_');
+            }
+            else{
+                sb.append(c);
+                st.add(c);
+            }
+            }
+        
+        return sb.toString();
+    }
+}
