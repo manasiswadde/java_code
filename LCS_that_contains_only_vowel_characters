@@ -28,3 +28,25 @@ class Longsubsequence {
 }
 
 output=3
+
+2.Using the Set 
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String str1="elephant";
+        String str2="elevant";
+        int count=0;
+        Set<Character> set=new HashSet<>();
+        for(char c:str1.toCharArray()){
+            if(c=='a'||c=='e' ||c=='i' ||c=='o' || c=='u'){
+                set.add(c);
+            }
+        }
+        for(char c:str2.toCharArray()){
+            if(c=='a'||c=='e' ||c=='i' ||c=='o' || c=='u' && set.contains(c)){
+                count++;
+            }
+        }
+        System.out.print(count);
+    }
+}
