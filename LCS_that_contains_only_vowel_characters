@@ -1,0 +1,30 @@
+// 🧩 Problem Description
+
+You are given two strings, and you need to find the length of the longest common subsequence (LCS) that contains only vowel characters (a, e, i, o, u).
+
+A subsequence is a sequence that can be derived from another string by deleting some or no characters, without changing the order of the remaining characters.
+
+You must compare the two given strings and compute how many vowel characters form the longest subsequence common to both strings.
+
+1. using the StringBuilder
+class Longsubsequence {
+    public static void main(String[] args) {
+        String str1="elephant";
+        String str2="elevant";
+        int count=0;
+        StringBuilder sb=new StringBuilder();
+        for(char c:str1.toCharArray()){
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+                sb.append(c);
+            }
+        }
+        for(char c:str2.toCharArray()){
+            if(sb.toString().contains(String.valueOf(c))){
+                count++;
+            }
+        }
+        System.out.print(count);
+    }
+}
+
+output=3
