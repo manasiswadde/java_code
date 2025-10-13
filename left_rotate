@@ -1,0 +1,21 @@
+left rotate array
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+     int arr[]={1,2,3,4,5};
+     int k=9;
+     int k1=k%arr.length;
+     while(k1>0){
+         int temp=arr[0];
+         for(int i=1;i<arr.length;i++){
+             arr[i-1]=arr[i];
+         }
+         arr[arr.length-1]=temp;
+         k1--;
+     }
+     System.out.print(Arrays.toString(arr));
+    }
+}
+output:
+[5, 1, 2, 3, 4]
