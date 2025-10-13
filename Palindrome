@@ -48,3 +48,30 @@ class Palindrome {
        return "not palindrome";
     }
 }
+
+check array is palindrome or not
+
+class Main {
+    public static void main(String[] args) {
+     int arr[]={1,2,3,2,1};
+     int start=0,end=arr.length-1;
+     boolean val=true;
+    while(start<end){
+        if(arr[start]!=arr[end]){
+            val=false;
+            break;
+        }
+        start++;
+        end--;
+    }
+    if(val){
+        System.out.print("palindrome");
+    }
+    else{
+        System.out.print("not palindrome");
+    }
+    
+    }
+}
+
+output:palindrome
