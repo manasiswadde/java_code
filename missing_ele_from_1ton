@@ -1,0 +1,33 @@
+
+Find the missing number in a sequence from 1 to n.
+
+You are given an array containing n - 1 distinct numbers taken from the range 1 to n.
+Your task is to find the one number missing from the sequence.
+
+🧠 Example:
+
+Input:
+arr = {1, 2, 4, 5}
+n = 5
+
+
+Expected Sequence:
+1, 2, 3, 4, 5
+output:3
+
+class Main {
+    public static void main(String[] args) {
+        int num[]={1,2,5};
+        int n=5;
+        boolean bool[]=new boolean[n+1];
+        
+        for(int val:num){
+            bool[val]=true;
+        }
+        for(int i=1;i<=n;i++){
+            if(!bool[i]){
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
