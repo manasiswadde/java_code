@@ -1,0 +1,23 @@
+//Maximum number of people using Lift without exceeding the Lift capacity.
+
+import java.util.*;
+class Max_capacity_people {
+    public static void main(String[] args) {
+       int weights[] = {60, 80, 40, 50, 90};
+       int capacity = 200;
+       Arrays.sort(weights);
+       int cap=0,count=0;
+       for(int i=0;i<weights.length;i++){
+             if (cap + weights[i] <= capacity) {
+                cap += weights[i];
+                count++;
+            }
+       }
+       System.out.println(Arrays.toString(weights));
+       System.out.println("count="+count+" capacity="+cap);
+    }
+}
+
+output:
+[40, 50, 60, 80, 90]
+count=3 capacity=150
