@@ -1,0 +1,23 @@
+//removing all vowels from string and then generating the maximum lexicographical permutation from the remaining characters.
+
+import java.util.*;
+class Max_permutation {
+    public static void main(String[] args) {
+        String s="Education";
+        s=s.toLowerCase();
+        String vowels="aeiou";
+        StringBuilder str=new StringBuilder();
+        for(char c:s.toCharArray()){
+            if(vowels.indexOf(c)==-1){
+               str.append(c);
+            }
+        }
+        
+        char c[]=str.toString().toCharArray();
+        Arrays.sort(c);
+        String res=new StringBuilder(new String(c)).reverse().toString();
+        System.out.println(res);
+    }
+}
+
+output:tndc
