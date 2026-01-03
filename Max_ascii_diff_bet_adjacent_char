@@ -1,0 +1,18 @@
+//Given a string, find the maximum absolute difference between the ASCII values of adjacent characters.
+
+import java.util.Arrays;
+class Max_ascii_diff_bet_adjacent_char {
+    public static void main(String[] args) {
+       String str="education";
+       int maxdiff=0;
+       for(int i=0;i<str.length()-1;i++){
+           int diff=Math.abs((int)str.charAt(i)-(int)str.charAt(i+1));
+           if(diff>maxdiff){
+               maxdiff=diff;
+           }
+       }
+       System.out.print(maxdiff);
+    }
+}
+
+output:19
