@@ -1,0 +1,34 @@
+
+import java.util.Arrays;
+class Max_diff_bet_sum_of_digit {
+    public static void main(String[] args) {
+       int arr[] = {123, 45, 9, 88};
+       int sumarr[]=new int[arr.length];
+       for(int i=0;i<arr.length;i++){
+           int sum=0,no=arr[i];
+           while(no>0){
+               int temp=no%10;
+               sum=sum+temp;
+               no=no/10;
+           }
+           sumarr[i]=sum;
+       }
+       int max=0,min=sumarr[0];
+       for(int i=0;i<sumarr.length;i++){
+           if(sumarr[i]>max){
+               max=sumarr[i];
+           }
+           if(sumarr[i]<min){
+               min=sumarr[i];
+           }
+       }
+      
+       System.out.println("Array after the sum of digit "+Arrays.toString(sumarr));
+       System.out.println("min= "+min+" max= "+max);
+        System.out.println("max diff bet digit sum is "+(max-min));
+    }
+}
+output:
+Array after the sum of digit [6, 9, 9, 16]
+min= 6 max= 16
+max diff bet digit sum is 10
