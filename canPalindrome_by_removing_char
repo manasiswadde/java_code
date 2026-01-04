@@ -1,0 +1,38 @@
+//You want to COUNT how many strings (from a list/array) can become a palindrome by removing exactly ONE character.
+
+
+class canPalindrome_by_removing_char {
+     public static boolean isPalindrome(String s,int left,int right){
+         while(left<right){
+             if(s.charAt(left)!=s.charAt(right)){
+                 return false;
+             }
+             left++;
+             right--;
+         }
+         return true;
+     }
+     public static boolean canbecomePalindrome(String s){
+         int left=0,right=s.length()-1;
+         while(left<right)
+         {
+              if(s.charAt(left)!=s.charAt(right)){
+               return isPalindrome(s,left+1,right) || isPalindrome(s,left,right-1);
+         }
+         left++;
+         right--;
+         }
+        return false;
+     }
+    public static void main(String[] args) {
+       String arr[]={"abca", "abc", "deeee", "racecar", "radkar"};
+       int count=0;
+       for(String s:arr){
+          if(canbecomePalindrome(s)) {
+              count++;
+          }
+       }
+       
+       System.out.print(count);
+    }
+}
