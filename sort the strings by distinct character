@@ -1,0 +1,21 @@
+//sort the strings by distinct character
+
+import java.util.*;
+class Sort_String {
+    
+    static int distinctcount(String str){
+        Set<Character> set=new HashSet<>();
+        for(char c:str.toCharArray()){
+            set.add(c);
+        }
+        return set.size();
+    }
+    public static void main(String[] args) {
+        String str[]={"banana","apple","abc","aabb"};
+        Arrays.sort(str,(a,b) -> distinctcount(a)-distinctcount(b));
+        System.out.print(Arrays.toString(str));
+    }
+}
+
+output:
+[aabb, banana, abc, apple]
