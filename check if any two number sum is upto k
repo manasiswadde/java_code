@@ -1,0 +1,47 @@
+//check if any two number sum is upto k
+
+method 1
+
+import java.util.*;
+class checksum {
+    
+    static boolean checksum(int arr[],int k){
+        Set<Integer> set=new HashSet<>();
+        for(int i:arr){
+            int need=k-i;
+            if(set.contains(need)){
+                return true;
+            }
+            set.add(i);
+        }
+        return false;
+    }  
+    public static void main(String[] args) {
+        int[] arr = {2, 7, 11, 15};
+        int k = 9;
+        System.out.println(checksum(arr, k));
+    }
+}
+
+output:true
+
+method 2
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 7, 11, 15};
+        int k = 9;
+        boolean found=false;
+        
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(k==arr[i]+arr[j]){
+                    found=true;
+                    break;
+                }
+            }
+            
+        }
+        System.out.print(found);
+    }
+}
