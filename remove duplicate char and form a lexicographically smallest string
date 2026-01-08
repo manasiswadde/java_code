@@ -1,0 +1,21 @@
+
+//remove duplicate characters from the string and form a lexicographically smallest string
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+       String str="cdacbcacajhbacdcbc";
+       Set<Character> s=new TreeSet<>();
+       for(char c:str.toCharArray()){
+           s.add(c);
+       }
+      StringBuilder res=new StringBuilder();
+      for(char c:s){
+           res.append(c);
+       }
+      System.out.println(res.toString());
+    }
+}
+
+output:
+abcdhj
