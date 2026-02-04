@@ -1,0 +1,20 @@
+class Main {
+    public static void main(String[] args) {
+        String str="1234567890";
+        String even="";
+        String odd="";
+        for(int i=0;i<str.length();i++){
+            if(i%2==0){
+                even=even+str.charAt(i);
+            }
+            else{
+                odd=odd+str.charAt(i);
+            }
+        }
+        System.out.print(even+odd);
+        
+    }
+}
+
+output:1357924680
+
