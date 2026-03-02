@@ -1,0 +1,40 @@
+//This Java program counts how many characters from the first string (str1) match with the unique characters present in the second string (str2).
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter String1:");
+        String str1 = sc.next();
+
+        System.out.println("enter String2:");
+        String str2 = sc.next();
+
+        int count = 0;
+
+        Set<Character> s=new HashSet<>();
+        for(char c:str2.toCharArray()){
+            s.add(c);
+            
+        }
+        for(char c:s){
+            for(char ch:str1.toCharArray()){
+                if(c==ch){
+                    count++;
+                }
+            }
+            
+        }
+        System.out.println(count);
+    }
+}
+
+output:
+enter String1:
+abc
+enter String2:
+abcdabcdabcdabcd
+3
