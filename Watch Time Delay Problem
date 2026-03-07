@@ -1,0 +1,35 @@
+A watchmaker wants to check whether a newly made watch shows the correct time.
+You are given the initial correct time (h, m), the time shown by the new watch (h1, m1) after some time, and the number of hours (x) that have passed.
+Calculate the difference in minutes between the expected correct time after x hours and the time shown by the new watch.
+Print a positive value if the watch is lagging (slow).
+Print a negative value if the watch is early (fast).
+Print 0 if the watch shows the correct time.
+
+Input
+h m → initial time (hours, minutes)
+h1 m1 → time shown by new watch
+x → hours passed
+
+Output
+Print the difference in minutes between the expected time and the watch time.
+
+Example
+Input
+10 0
+12 10
+2
+
+Output
+-10
+
+class Main {
+    public static void main(String[] args) {
+        int h=9,m=30,h1=11,m1=20,x=2;
+        //converting hours to minutes
+        int initialtime=h*60+m;
+        int expectedtime=initialtime+(x*60);
+        int new_watch_time=h1*60+m1;
+        int delay=expectedtime-new_watch_time;
+        System.out.println(delay);
+    }
+}
