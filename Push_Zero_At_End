@@ -1,0 +1,56 @@
+
+/*
+ *  A chocolate factory is packing chocolates into the packets. The chocolate packets here 
+ * represent an array of N number of integer values. The task is to find the empty packets(0) of 
+ * chocolate and push it to the end of the conveyor belt(array). Click here to see solution
+Example 1 : N=8 and arr = [4,5,0,1,9,0,5,0].
+
+There are 3 empty packets in the given set. These 3 empty packets represented as O should be pushed towards the end of the array
+ */
+
+import java.util.*;
+class Push_Zero_At_End {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a number:");
+        int no=sc.nextInt();
+        int arr[]=new int[no];
+        for(int i=0;i<no;i++){
+            System.out.println("arr["+ i +"] =");
+            arr[i]=sc.nextInt();
+        }
+        int count=0;
+        for(int i=0;i<no;i++){
+            if(arr[i]!=0){
+                arr[count]=arr[i];
+                count++;
+            }
+        }
+        for(int i=count;i<no;i++){
+            arr[i]=0;
+        }
+        System.out.print(Arrays.toString(arr));
+    }
+}
+
+output:
+enter a number:
+8
+arr[0] =
+4
+arr[1] =
+5
+arr[2] =
+0
+arr[3] =
+1
+arr[4] =
+9
+arr[5] =
+0
+arr[6] =
+
+2
+arr[7] =
+0
+[4, 5, 1, 9, 2, 0, 0, 0]
