@@ -1,0 +1,51 @@
+/* Merge Two Arrays and find the unique elements From the merged array*/
+
+import java.util.*;
+class Merge_array {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("enter the length of array 1:");
+       int n1=sc.nextInt();
+       int arr[]=new int[n1];
+       for(int i=0;i<n1;i++){
+           arr[i]=sc.nextInt();
+       }
+       
+        System.out.println("enter the length of array 2:");
+       int n2=sc.nextInt();
+       int arr2[]=new int[n2];
+       for(int i=0;i<n2;i++){
+           arr2[i]=sc.nextInt();
+       }
+       
+       int arr3[]=new int[arr.length+arr2.length];
+       for(int i=0;i<arr.length;i++){
+           arr3[i]=arr[i];
+       }
+       for(int i=0;i<arr2.length;i++){
+           arr3[n1+i]=arr2[i];
+       }
+       
+       Set<Integer> s=new HashSet<>();
+       for(int i:arr3){
+           s.add(i);
+       }
+       System.out.print(s.size());
+    }
+}
+
+
+enter the length of array 1:
+5
+1
+2
+3
+4
+5
+enter the length of array 2:
+3
+1
+2
+3
+6
+=== Code Execution Successful ===
