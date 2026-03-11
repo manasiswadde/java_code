@@ -1,0 +1,48 @@
+/*
+You are given a string representing a sequence of binary values (0 and 1) and logical operators. The operators represent the following operations:
+A → AND
+B → OR
+C → XOR
+The string is processed strictly from left to right, performing one operation at a time, ignoring the conventional operator precedence rules.
+At each step:
+Take the current binary result.
+Apply the operator with the next binary value.
+Use the result as the input for the next operation.
+If the input string is NULL, return -1.*/
+
+
+class Main {
+    public static void main(String[] args) {
+        String str="1C0C1C1A0B1";
+        if(str.length()==0){
+            System.out.print("null");
+        }
+        else if(str.length()<=1){
+            System.out.print(1);
+        }
+        else{
+            
+        
+        int  c1=str.charAt(0)-'0';
+         int ans=0;
+        for(int i=0;i<str.length()-2;i+=2){
+            int c2=str.charAt(i+2)-'0';
+           
+            if(str.charAt(i+1)=='A'){
+                ans=c1&c2;
+            }
+            else if (str.charAt(i+1)=='B'){
+                 ans=c1|c2;
+            }
+            else {
+                 ans=c1^c2;
+            }
+            c1=ans;
+        }
+        System.out.print(ans);
+    }
+    }
+}
+
+
+output:1
