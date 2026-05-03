@@ -1,0 +1,36 @@
+You are given an integer n.
+Create an array nums of size n + 1.
+Rules:
+nums[0] = 0
+nums[1] = 1
+For every i:
+If index is even:
+nums[2*i] = nums[i]
+If index is odd:
+nums[2*i + 1] = nums[i] + nums[i + 1]
+Finally return the largest number in the array.
+
+
+class Main {
+    public static void main(String[] args) {
+       int n=7;
+       int arr[]=new int[n+1];
+       arr[0]=0;
+       arr[1]=1;
+       int max=arr[0];
+       for(int i=1;i<n/2;i++){
+           arr[2*i] = arr[i];
+           if(arr[2*i + 1]<=n){
+               arr[2*i + 1] = arr[i] + arr[i + 1];
+           }
+       }
+       for(int i=1;i<=n;i++){
+           if(arr[i]>max){
+               max=arr[i];
+           }
+       }
+       System.out.println(max);
+    }
+}
+
+output:3
