@@ -75,3 +75,22 @@ class Main {
 }
 
 output:palindrome
+
+//recursion
+
+class Main {
+    static int sum=0;
+    public static boolean palin(int n,int og){
+    
+        if(n==0){
+            return og==sum;
+        }
+        int rem=n%10;
+        sum=sum*10+rem;
+       return palin(n/10,og);
+    }
+    public static void main(String[] args) {
+        int n=12321;
+       System.out.println(palin(n,n));
+    }
+}
