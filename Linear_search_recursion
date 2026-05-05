@@ -1,0 +1,37 @@
+//recursion in linear search 
+1.print index
+class Main {
+    
+    public static int  search(int arr[],int target,int i)
+    {
+        if(target==arr[i]){
+            return i;
+        }
+        if(i==arr.length-1){
+            return -1;
+        }
+       
+        return search(arr,target,i+1);
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,3,5,4,18};
+        System.out.println(search(arr,5,0));
+    }
+}
+
+2.print boolean value
+class Main {
+    
+    public static int  search(int arr[],int target,int i)
+    {
+        if(target==arr[i]){
+            return true;
+        }
+       
+        return arr.length-1>i && search(arr,target,i+1);
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,3,5,4,18};
+        System.out.println(search(arr,17,0));
+    }
+}
